@@ -4,6 +4,7 @@ import mongoose from 'mongoose';
 import cors from 'cors';
 
 import postRoutes from './routes/posts.js';
+import CONNECTION_URL  from './env.js';
 
 const app = express();
 
@@ -29,7 +30,6 @@ app.use((err, req, res, next) => {
     });
 });
 
-const CONNECTION_URL = 'mongodb+srv://Bileonaire:1Lomkones.@cluster0.iyr6l.mongodb.net/<dbname>?retryWrites=true&w=majority';
 const PORT = process.env.PORT || 5000;
 
 mongoose.connect(CONNECTION_URL, {useNewUrlParser: true, useUnifiedTopology: true})
