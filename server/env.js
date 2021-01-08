@@ -1,1 +1,0 @@
-export const CONNECTION_URL = 'db_url';
