@@ -15,7 +15,7 @@ app.use(cors());
 app.use('/posts', postRoutes);
 
 const PORT = process.env.PORT || 5000;
-const MongoDB = 'mongodb+srv://Bileonaire:1Lomkones.@cluster0.iyr6l.mongodb.net/<dbname>?retryWrites=true&w=majority';
+const MongoDB = 'mongodb+srv://Bileonaire:<password>.@cluster0.iyr6l.mongodb.net/<dbname>?retryWrites=true&w=majority';
 const CONNECTION_URL = process.env.CONNECTION_URL || MongoDB;
 
 mongoose.connect(CONNECTION_URL, {useNewUrlParser: true, useUnifiedTopology: true})
